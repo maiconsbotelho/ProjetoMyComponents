@@ -1,0 +1,331 @@
+/* Definição de variáveis de cor e espaçamento global */
+:root {
+    --primary-color: #ff7833; /* Cor primária */
+    --secondary-color: #31333b; /* Cor secundária principal */
+    --secondary-color-light: #444856; /* Cor secundária mais clara */
+    --secondary-color-dark: #23252d; /* Cor secundária mais escura */
+    --text-color: #e7e7e7; /* Cor do texto padrão */
+    --defaut-gap: 3rem; /* Espaçamento padrão */
+}
+
+/* Configurações gerais para o elemento HTML */
+html {
+    font-size: 62.5%; /* Tamanho base de fonte para facilitar o uso de unidades rem */
+}
+
+/* Configurações gerais para o corpo do documento */
+body {
+    display: flex;
+    color: var(--text-color);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+    background-image: url(../imagens/bg-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Estilo para cabeçalhos de nível 1 */
+h1 {
+    font-size: 4rem;
+    color: #a7a7a7;
+    margin: 2rem 0 5rem;
+}
+
+/* Estilo para cabeçalhos de nível 2, 3 e 4 */
+h2, h3, h4 {
+    color: var(--primary-color);
+}
+
+/* Estilo para parágrafos */
+p {
+    margin: 1.6rem 0;
+}
+
+/* Estilo para links */
+a {
+    color: inherit;
+}
+
+/* Estilo para a tag 'article' */
+article {
+    padding: 1em 0;
+}
+
+/* Estilo para a tag 'section' */
+section {
+    margin-bottom: 3rem;
+}
+
+/* Estilo para destacar um bloco de texto */
+.hightlight {
+    border-left: 1px solid var(--primary-color);
+    font-size: 1.1em;
+    padding: 0 0 0 2em;
+    margin-bottom: 2.2em;
+}
+
+/* Estilo para o cabeçalho e a seção principal */
+.header, .main {
+    font-size: 1.6rem;
+}
+
+/* Estilo específico para o cabeçalho */
+.header {
+    flex: 0 0 26rem;
+    background-color: rgba(49, 51, 59, .8);
+}
+
+/* Estilo específico para a seção principal */
+.main {
+    background-color: rgba(68, 72, 86, .6);
+    flex: 1 0;
+    padding: 6.5rem 6rem 7.5rem;
+}
+
+/* Estilo para a foto de perfil */
+.foto-perfil {
+    max-width: 10rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para a navegação no cabeçalho */
+.header-nav {
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Estilo para a lista de navegação no cabeçalho */
+.header-nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Estilo para os itens da lista de navegação no cabeçalho */
+.header-nav li {
+    border-bottom: 1px solid var(--secondary-color-light);
+    padding: .4rem 0;
+}
+
+/* Estilo para os links na lista de navegação no cabeçalho */
+.header-nav ul a {
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    background-color: transparent;
+    transition: padding-right .2s, background-color .4s;
+}
+
+/* Estilo para os links na lista de navegação no cabeçalho ao passar o mouse */
+.header-nav ul a:hover,
+.header-nav ul a:focus {
+    background-color: var(--secondary-color-light);
+    padding-right: 1rem;
+}
+
+/* Estilo para o componente de card */
+.card {
+    max-width: 740px;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
+
+/* Estilo para o conteúdo do card */
+.card_content {
+    padding: .5em 1em 1em;
+}
+
+/* Estilo para parágrafos e título dentro do card */
+.card_content p, .card_title {
+    margin: 0;
+}
+
+/* Estilo para o título do card */
+.card_title {
+    font-size: 1.75em;
+    margin-bottom: .25em;
+}
+
+/* Estilo para imagens dentro do card */
+.card img {
+    max-width: 100%;
+}
+
+/* Estilo para as linhas de layout flexível */
+.row {
+    display: flex;
+    gap: var(--defaut-gap);
+    padding-top: 1.5rem;
+    justify-content: space-between;
+}
+
+/* Estilo para linhas aninhadas dentro de uma linha */
+.row .row {
+    padding-top: 0;
+}
+
+/* Estilo para itens dentro de uma linha flexível */
+.row > * {
+    flex: 1 0 0%;
+}
+
+/* Estilo para listas alternadas */
+.alternate {
+    list-style-type: none;
+}
+
+/* Estilo para itens de lista alternada */
+.alternate li {
+    padding: 0;
+}
+
+/* Estilo para bordas inferiores de itens de lista alternada */
+.alternate li:not(:last-child) {
+    border-bottom: 2px solid;
+}
+
+/* Estilo para lista com numeração em algarismos romanos */
+.roman {
+    list-style-type: lower-latin;
+}
+
+/* Estilo para lista com emojis personalizados */
+.list-emoji {
+    list-style-type: "\1F642";
+}
+
+/* Estilo para inputs, labels, textareas e selects */
+input, label, textarea, select {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para inputs do tipo radio e checkbox */
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+/* Estilo padrão para inputs, textareas e selects */
+input, textarea, select {
+    background-color: #ccc;
+    padding: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 1.6rem;
+    border: 0;
+}
+
+/* Estilo para botões */
+.btn {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color-dark);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .8em 1.2em;
+    border-radius: 5px;
+}
+
+/* Estilo para botões adjacentes */
+.btn + .btn {
+    margin-left: 2rem;
+}
+
+/* Estilo para hover e foco nos botões */
+.btn:hover, .btn:focus {
+    background-color: var(--secondary-color-dark);
+}
+
+/* Estilo para botões com contorno */
+.btn-stroke {
+    background-color: transparent;
+}
+
+/* Estilo para botões grandes */
+.btn-big {
+    font-size: 1.6rem;
+}
+
+/* Estilo para botões de largura total */
+.btn-full {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para botões de largura total adjacentes */
+.btn-full + .btn-full {
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+/* Estilo para formulário específico */
+.form-quiz {
+    width: calc(50% - var(--defaut-gap) / 2);
+}
+
+/* Estilo para tabelas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para células e cabeçalhos de tabela */
+.table td:last-child, .table th:last-child {
+    text-align: right;
+}
+
+/* Estilo para células e cabeçalhos de tabela */
+.table td, .table th {
+    padding: 1.6rem;
+}
+
+/* Estilo para linhas de tabela (não alternadas) */
+.table:not(.table-alternate) td, .table:not(.table-alternate) th {
+    border-bottom: 2px solid var(--secondary-color-dark);
+}
+
+/* Estilo para cabeçalhos de tabela */
+.table th {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+/* Estilo para linhas alternadas de tabela */
+.table-alternate tbody tr:nth-child(odd) {
+    background-color: var(--secondary-color);
+}
+
+/* Estilo para bordas direitas de células de tabela */
+.table-verticalLines td:not(:last-child), .table-verticalLines th:not(:last-child) {
+    border-right: 1px solid var(--secondary-color-dark);
+}
+
+/* Estilo para links com ícones */
+.link-icon {
+    display: inline-block;
+    margin-right: 3rem;
+    transition: color .3s;
+    text-decoration: none;
+    font-style: normal;
+}
+
+/* Estilo para ícones em links */
+.link-icon svg {
+    width: 3rem;
+    height: 3rem;
+    fill: currentColor;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+/* Estilo para hover em links com ícones */
+.link-icon:hover {
+    color: var(--primary-color);
+}
+
